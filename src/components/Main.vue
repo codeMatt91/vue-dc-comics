@@ -67,6 +67,7 @@ export default {
   display: flex;
   align-items: center;
 }
+
 h2 {
   color: $c-white;
 }
@@ -75,12 +76,14 @@ h2 {
   position: relative;
   z-index: 1;
   color: $c-white;
-  min-height: 150px;
+  max-height: 150px;
   background-color: $c-blue;
 }
 
 .card-img figure {
+  width: 20%;
   display: flex;
   align-items: center;
+
 }
 </style>

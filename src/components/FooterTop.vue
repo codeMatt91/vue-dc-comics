@@ -70,7 +70,6 @@ export default {
 @import "../assets/sass/_vars.scss";
 
 .footer-top {
-  position: relative;
   display: flex;
   align-items: center;
   height: 600px;
@@ -97,12 +96,14 @@ export default {
 }
 
 .logo {
-  position: absolute;
-  right: 116px;
-  bottom: -75px;
+  position: relative;
+  width: 50%;
   z-index: 0;
-  img{
-     width: 90%;
+  img {
+    position: absolute;
+    right: 0;
+    bottom: -140px;
+    width: 90%;
   }
 }
 </style>
