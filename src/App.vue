@@ -1,15 +1,18 @@
 <template>
   <div>
-    <header></header>
+    <Header />
     <main></main>
     <footer></footer>
   </div>
 </template>
 
 <script>
+import Header from "./components/Header";
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header,
+  },
 };
 </script>
 
