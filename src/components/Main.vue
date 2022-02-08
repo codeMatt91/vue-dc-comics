@@ -72,6 +72,8 @@ h2 {
 }
 
 #shop {
+  position: relative;
+  z-index: 1;
   color: $c-white;
   min-height: 150px;
   background-color: $c-blue;

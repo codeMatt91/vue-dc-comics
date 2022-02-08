@@ -9,6 +9,11 @@
           </ul>
         </div>
       </div>
+      <div class="logo">
+        <figure>
+          <img src="../assets/img/dc-logo-bg.png" alt="Logo dc" />
+        </figure>
+      </div>
     </div>
   </div>
 </template>
@@ -65,9 +70,10 @@ export default {
 @import "../assets/sass/_vars.scss";
 
 .footer-top {
+  position: relative;
   display: flex;
   align-items: center;
-  height: 800px;
+  height: 600px;
   color: $c-white;
   background-image: url("../assets/img/footer-bg.jpg");
   max-height: 350px;
@@ -87,6 +93,16 @@ export default {
     li {
       color: grey;
     }
+  }
+}
+
+.logo {
+  position: absolute;
+  right: 116px;
+  bottom: -75px;
+  z-index: 0;
+  img{
+     width: 90%;
   }
 }
 </style>
