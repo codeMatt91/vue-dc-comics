@@ -9,7 +9,10 @@
       <div class="container">
         <div v-for="card in cards" :key="card.text" class="card-img">
           <figure>
-            <img :src="`../assets/img/${card.url}`" :alt="card.description" />
+            <img
+              :src="require(`../assets/img/${card.url}`)"
+              :alt="card.description"
+            />
             <div>{{ card.text }}</div>
           </figure>
         </div>
