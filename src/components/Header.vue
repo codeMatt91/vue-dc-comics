@@ -8,16 +8,11 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">CHARACTERS</a></li>
-          <li><a href="#">COMICS</a></li>
-          <li><a href="#"> MOVIES</a></li>
-          <li><a href="#">TV</a></li>
-          <li><a href="#">GAMES</a></li>
-          <li><a href="#">COLLECTIBLES</a></li>
-          <li><a href="#">VIDEOS</a></li>
-          <li><a href="#">FANS</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">SHOP</a></li>
+          <li v-for="(link, index) in links" :key="index">
+            <a :href="link.url" :class="{ active: link.active }">
+              {{ link.text }}</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
@@ -27,6 +22,22 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      links: [
+        { text: "CHARACTERS", url: "#", active: false },
+        { text: "COMICS", url: "#", active: false },
+        { text: "MOVIES", url: "#", active: false },
+        { text: "TV", url: "#", active: false },
+        { text: "GAMES", url: "#", active: false },
+        { text: "COLLECTIBLES", url: "#", active: false },
+        { text: "VIDEOS", url: "#", active: false },
+        { text: "FANS", url: "#", active: false },
+        { text: "NEWS", url: "#", active: false },
+        { text: "SHOP", url: "#", active: false },
+      ],
+    };
+  },
 };
 </script>
 
@@ -58,6 +69,10 @@ nav {
         height: $h-100;
         display: flex;
         align-items: center;
+        &:hover,
+        &.active {
+          color: $c-blue;
+        }
       }
     }
   }
