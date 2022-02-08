@@ -1,5 +1,9 @@
 <template>
-<div></div>
+  <div>
+    <header></header>
+    <main></main>
+    <footer></footer>
+  </div>
 </template>
 
 <script>
@@ -9,4 +13,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+@import "./assets/sass/style.scss";
+</style>
