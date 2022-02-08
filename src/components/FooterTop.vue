@@ -75,6 +75,8 @@ export default {
   height: 600px;
   color: $c-white;
   background-image: url("../assets/img/footer-bg.jpg");
+  background-position: contain;
+
   max-height: 350px;
 }
 

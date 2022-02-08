@@ -9,11 +9,13 @@
       <div class="container">
         <div v-for="card in cards" :key="card.text" class="card-img">
           <figure>
-            <img
-              :src="require(`../assets/img/${card.url}`)"
-              :alt="card.description"
-            />
-            <div>{{ card.text }}</div>
+            <div class="immagine">
+              <img
+                :src="require(`../assets/img/${card.url}`)"
+                :alt="card.description"
+              />
+            </div>
+            <div class="text">{{ card.text }}</div>
           </figure>
         </div>
       </div>
@@ -76,14 +78,31 @@ h2 {
   position: relative;
   z-index: 1;
   color: $c-white;
-  max-height: 150px;
+  padding: 20px 0;
   background-color: $c-blue;
 }
 
-.card-img figure {
+.card-img {
   width: 20%;
-  display: flex;
-  align-items: center;
+  figure {
+    display: flex;
+    align-items: center;
+    .immagine {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      height: 50%;
+    }
+    .text {
+      font-size: 15px;
+    }
+  }
+}
 
+.card-img:last-child .immagine {
+  width: 100%;
+  img {
+    margin-top: 15px;
+  }
 }
 </style>
