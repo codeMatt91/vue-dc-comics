@@ -1,14 +1,14 @@
 <template>
   <div class="card-serie">
-    <img :src="thumb" :alt="type" />
-    <h5>{{ series.toUpperCase() }}</h5>
+    <img :src="serie.thumb" :alt="serie.type" />
+    <h5>{{ serie.series.toUpperCase() }}</h5>
   </div>
 </template>
 
 <script>
 export default {
   name: "CardImmage",
-  props: ["thumb", "series", "type"],
+  props: ["serie"],
 };
 </script>
 

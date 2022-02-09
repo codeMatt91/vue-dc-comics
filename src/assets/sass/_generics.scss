@@ -15,3 +15,13 @@ img {
 .wrapper {
   height: 100vh;
 }
+
+button {
+  font-size: 18px;
+  border: 0;
+  background-color: $c-blue;
+  padding: 15px 20px;
+  color: $c-white;
+  font-weight: bold;
+  cursor: pointer;
+}

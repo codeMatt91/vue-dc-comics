@@ -1,7 +1,11 @@
 <template>
   <main>
     <!-- Jumbotron  -->
-    <div class="jumbotron"></div>
+    <div class="jumbotron">
+      <div class="container">
+        <button>CURRENT SERIES</button>
+      </div>
+    </div>
 
     <!-- Section Main-Series  -->
     <div class="main-series">
@@ -9,10 +13,9 @@
         <CardImmage
           v-for="(serie, index) in series"
           :key="index"
-          :url="serie.thumb"
-          :name="serie.series"
-          :alt="serie.type"
+          :serie="serie"
         />
+        <div class="load"><button>LOAD MORE</button></div>
       </div>
     </div>
 
@@ -79,10 +82,20 @@ export default {
 
 <style lang="scss" served>
 @import "../assets/sass/_vars.scss";
+@import "../assets/sass/_generics.scss";
 
 .main-series {
   background-color: $c-black;
-  padding: 30px 0;
+  padding: 20px 0;
+  .load {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    button {
+      font-size: 12px;
+      padding: 10px 40px;
+    }
+  }
 }
 .container {
   display: flex;
@@ -92,7 +105,16 @@ export default {
   background-image: url("../assets/img/jumbotron.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 300px;
+  height: 300px;
+  .container {
+    position: relative;
+    height: 100%;
+    button {
+      position: absolute;
+      bottom: -30px;
+      left: 0%;
+    }
+  }
 }
 
 h2 {

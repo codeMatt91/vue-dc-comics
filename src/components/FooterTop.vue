@@ -2,7 +2,7 @@
   <div class="footer-top">
     <div class="container">
       <div id="links">
-        <div v-for="(link, index) in links" :key="index">
+        <div class="list" v-for="(link, index) in links" :key="index">
           <h3>{{ link.title }}</h3>
           <ul>
             <li v-for="(item, index) in link.array" :key="index">{{ item }}</li>
@@ -84,6 +84,9 @@ export default {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
+  .list{
+    width: 33%;
+  }
   h3 {
     padding: 0 0 10px 10px;
   }
