@@ -11,7 +11,7 @@
           :key="index"
           :url="serie.thumb"
           :name="serie.series"
-          :alt="seire.type"
+          :alt="serie.type"
         />
       </div>
     </div>
