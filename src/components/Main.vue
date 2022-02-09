@@ -7,15 +7,14 @@
     <div class="main-series">
       <div class="container">
         <CardImmage
-        v-for="(serie, index) in series" :key="index"
-        :url="serie.thumb"
-        :name="serie.series"
-        :alt="seire.type"
+          v-for="(serie, index) in series"
+          :key="index"
+          :url="serie.thumb"
+          :name="serie.series"
+          :alt="seire.type"
         />
-          <img :src="serie.thumb" :alt="serie.type" />
-          <h5>{{ serie.series.toUpperCase() }}</h5>
-        </div>
       </div>
+    </div>
 
     <section id="shop">
       <div class="container">
@@ -36,12 +35,12 @@
 </template>
 
 <script>
-import CardImmage from "./CardImmage.vue"
+import CardImmage from "./CardImmage.vue";
 
 export default {
   name: "Main",
-  props:["series"],
-  components:{
+  props: ["series"],
+  components: {
     CardImmage,
   },
   data() {

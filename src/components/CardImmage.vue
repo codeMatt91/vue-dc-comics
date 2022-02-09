@@ -18,9 +18,6 @@ export default {
 .card-serie {
   flex-basis: calc(100% / 6);
   color: $c-white;
-  padding-bottom: 20px;
-  .img {
-    height: 50%;
-  }
+  padding: 20px;
 }
 </style>

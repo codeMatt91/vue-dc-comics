@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <Header />
-    <Main :series="series"/>
+    <Main :series="series" />
     <Footer />
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     Main,
     Footer,
   },
-  data(){
+  data() {
     return {
       series: [
         {
@@ -106,8 +106,8 @@ export default {
           type: "graphic novel",
         },
       ],
-    }
-  }
+    };
+  },
 };
 </script>
 
